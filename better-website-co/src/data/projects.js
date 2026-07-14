@@ -74,7 +74,7 @@ export const projects = [
   {
     id: 'everything-suits',
     name: 'Everything Suits',
-    url: 'everythingsuits.ng — in development',
+    url: 'everything-suits--suitseverything.replit.app',
     industry: 'Made-to-measure tailoring',
     problem:
       'A bespoke suit brand taking orders entirely through WhatsApp voice notes and photos — measurements got lost in scroll-back, and there was no structured way to capture a real order.',
@@ -126,6 +126,7 @@ export const projects = [
       ],
       takeaway:
         "A tailoring business sells precision. The intake process customers go through should feel like proof of that, not the one part of the experience still held together with voice notes.",
+      liveUrl: 'everything-suits--suitseverything.replit.app',
     },
   },
   {
