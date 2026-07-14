@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { tiers } from '../data/content'
 import { buildWhatsAppLink } from '../data/config'
 import Button from './Button'
-import Bee from './Bee/Bee'
 
 const TIER_LABEL = Object.fromEntries(tiers.map((t) => [t.id, t.name]))
 
@@ -93,20 +92,12 @@ export default function InquiryForm({ selectedTier, onSelectTier }) {
               className="rounded-2xl border p-10 text-center"
               style={{ borderColor: 'var(--border)', background: 'var(--card)' }}
             >
-              <Bee size="md" className="mx-auto mb-4" animateIn={false} />
               <p className="font-display text-2xl mb-2" style={{ color: 'var(--text-primary)' }}>
                 Message received.
               </p>
               <p style={{ color: 'var(--text-secondary)' }}>
                 We'll be in touch within one business day.
               </p>
-              <a
-                href="/meet-bee"
-                className="mt-5 inline-block text-xs underline underline-offset-4"
-                style={{ color: 'var(--text-muted)' }}
-              >
-                Want to know more about me?
-              </a>
             </motion.div>
           ) : (
             <motion.form

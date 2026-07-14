@@ -84,7 +84,7 @@ export default function BrowserMockup() {
       </div>
 
       {/* Viewport */}
-      <div className="relative h-[280px] md:h-[340px] overflow-hidden">
+      <div className="relative h-[320px] md:h-[400px] overflow-hidden">
         <AnimatePresence mode="wait">
           <motion.div
             key={current.id}
@@ -105,11 +105,11 @@ export default function BrowserMockup() {
                 <p className="eyebrow">Your website could live here</p>
               </div>
             ) : current.showcase ? (
-              <div className="relative flex-1 rounded-lg overflow-hidden" style={{ background: 'var(--bg)' }}>
+              <div className="relative flex-1 rounded-lg overflow-hidden flex items-center justify-center" style={{ background: 'var(--bg)' }}>
                 <img
                   src={current.showcase}
                   alt={`${current.name} live site`}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-contain"
                 />
                 <motion.div
                   className="absolute h-3 w-3 rounded-full border-2"

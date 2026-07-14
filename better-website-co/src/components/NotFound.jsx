@@ -1,12 +1,10 @@
 import { motion } from 'framer-motion'
-import Bee from './Bee/Bee'
 import Button from './Button'
 
 export default function NotFound() {
   return (
     <section className="min-h-[80vh] flex items-center justify-center py-24">
       <div className="container-bw max-w-md text-center">
-        <Bee size="lg" className="mx-auto mb-8" />
         <motion.h1
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}

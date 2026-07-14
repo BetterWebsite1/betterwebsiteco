@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import Button from './Button'
 import BrowserMockup from './BrowserMockup'
-import Bee from './Bee/Bee'
 
 export default function Hero() {
   return (
@@ -27,20 +26,13 @@ export default function Hero() {
           >
             Premium websites designed to turn visitors into paying customers.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4 relative">
+          <div className="mt-10 flex flex-wrap items-center gap-4">
             <Button href="#inquiry" variant="primary">
               Book a Free Strategy Call
             </Button>
             <Button href="#transformations" variant="secondary">
               View Transformations
             </Button>
-            {/* Bee points toward the primary CTA once, on load, then stays still. */}
-            <Bee
-              size="sm"
-              delay={0.9}
-              className="absolute -top-11 left-1 -scale-x-100 hidden sm:block"
-              once
-            />
           </div>
         </motion.div>
 

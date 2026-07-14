@@ -10,6 +10,8 @@ import suitsHeroDesktop from '../assets/case-studies/suits-hero-desktop.webp'
 import suitsGalleryDesktop from '../assets/case-studies/suits-gallery-desktop.webp'
 import dreamsHeroDarkDesktop from '../assets/case-studies/dreams-hero-dark-desktop.webp'
 import dreamsHeroLightDesktop from '../assets/case-studies/dreams-hero-light-desktop.webp'
+import dreamsHeroDarkMobile from '../assets/case-studies/dreams-hero-dark-mobile.webp'
+import ejimacoHeroMobile from '../assets/case-studies/ejimaco-hero-mobile.webp'
 
 export const projects = [
   {
@@ -162,6 +164,7 @@ export const projects = [
       ],
       showcaseImages: [ejimacoHeroDesktop, ejimacoCategoryDesktop],
       showcaseLabel: 'The Identity, Live',
+      mobileImage: ejimacoHeroMobile,
       applications: ['Business Card', 'Letterhead', 'Website Header', 'Social Profile', 'Packaging', 'Store Signage'],
       before: [
         'The brand looked inconsistent.',
@@ -190,6 +193,7 @@ export const portfolioExample = {
     'A multi-page personal portfolio with its own light/dark system and five distinct service pages — proof the same design system scales from product storefronts to personal brands.',
   heroImageDark: dreamsHeroDarkDesktop,
   heroImageLight: dreamsHeroLightDesktop,
+  heroImageDarkMobile: dreamsHeroDarkMobile,
 }
 
 export const upcomingProjects = [

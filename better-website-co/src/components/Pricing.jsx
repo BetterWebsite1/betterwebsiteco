@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { tiers } from '../data/content'
 import Button from './Button'
-import Bee from './Bee/Bee'
 
 function scrollToInquiry() {
   document.getElementById('inquiry')?.scrollIntoView({ behavior: 'smooth' })
@@ -49,8 +48,6 @@ export default function Pricing({ onSelect }) {
                   {tier.badge}
                 </span>
               )}
-
-              <Bee size="sm" className="mb-4" delay={i * 0.08} />
 
               <h3 className="font-display text-2xl mb-2" style={{ color: 'var(--text-primary)' }}>
                 {tier.name}
