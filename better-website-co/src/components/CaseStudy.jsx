@@ -186,6 +186,19 @@ export default function CaseStudy({ study, onClose }) {
               </section>
             )}
 
+            {/* Mobile screenshot — only shown when a real mobile capture exists, never faked from a desktop crop */}
+            {study.mobileImage && (
+              <section className="container-bw py-16 border-t text-center" style={{ borderColor: 'var(--border)' }}>
+                <Eyebrow>Works On Mobile Too</Eyebrow>
+                <div
+                  className="mt-8 mx-auto max-w-[240px] rounded-[2rem] border-[6px] overflow-hidden"
+                  style={{ borderColor: 'var(--border-strong)' }}
+                >
+                  <img src={study.mobileImage} alt={`${study.name} on mobile`} className="w-full h-auto block" />
+                </div>
+              </section>
+            )}
+
             {study.applications && (
               <section className="container-bw py-16 border-t" style={{ borderColor: 'var(--border)' }}>
                 <Eyebrow>Brand Applications</Eyebrow>

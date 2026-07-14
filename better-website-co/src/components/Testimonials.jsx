@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion'
 import crownbisiShot from '../assets/testimonials/crownbisi.jpg'
 import everythingSuitsShot from '../assets/testimonials/everything-suits.jpg'
-import ejimacoWordmark from '../assets/case-studies/ejimaco-wordmark.webp'
 import crownbisiLogo from '../assets/case-studies/crownbisi-logo.webp'
 
 const LOGOS = [
   { image: crownbisiLogo, name: 'Crownbisi Tech Ventures', desc: 'Internet & devices retail', bg: '#000000' },
-  { image: ejimacoWordmark, name: 'Ejimaco', desc: 'Creator gear & equipment retail', bg: '#ffffff' },
+  { letterMark: 'SUITS', name: 'Everything Suits', desc: 'Made-to-measure tailoring', bg: '#1a1a1a' },
 ]
 
 const TESTIMONIALS = [
@@ -51,7 +50,11 @@ export default function Testimonials() {
                 className="h-10 w-16 rounded-md flex items-center justify-center overflow-hidden shrink-0"
                 style={{ background: l.bg }}
               >
-                <img src={l.image} alt={l.name} className="h-6 w-auto object-contain" />
+                {l.image ? (
+                  <img src={l.image} alt={l.name} className="h-6 w-auto object-contain" />
+                ) : (
+                  <span className="text-[9px] font-semibold tracking-widest text-white">{l.letterMark}</span>
+                )}
               </div>
               <div>
                 <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>

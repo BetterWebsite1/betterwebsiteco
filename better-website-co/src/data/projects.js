@@ -1,12 +1,15 @@
 import ejimacoWordmark from '../assets/case-studies/ejimaco-wordmark.webp'
 import ejimacoEvolution from '../assets/case-studies/ejimaco-before-after.webp'
-import ejimacoHero from '../assets/case-studies/ejimaco-hero.webp'
-import ejimacoShop from '../assets/case-studies/ejimaco-shop.webp'
+import ejimacoHeroDesktop from '../assets/case-studies/ejimaco-hero-desktop.webp'
+import ejimacoCategoryDesktop from '../assets/case-studies/ejimaco-category-desktop.webp'
 import crownbisiLogo from '../assets/case-studies/crownbisi-logo.webp'
-import crownbisiSite from '../assets/case-studies/crownbisi-site.webp'
-import suitsHero from '../assets/case-studies/suits-hero.webp'
-import dreamsHeroDark from '../assets/case-studies/dreams-hero-dark.webp'
-import dreamsHeroLight from '../assets/case-studies/dreams-hero-light.webp'
+import crownbisiHeroDesktop from '../assets/case-studies/crownbisi-hero-desktop.webp'
+import crownbisiProductsDesktop from '../assets/case-studies/crownbisi-products-desktop.webp'
+import suitsHeroMobile from '../assets/case-studies/suits-hero.webp'
+import suitsHeroDesktop from '../assets/case-studies/suits-hero-desktop.webp'
+import suitsGalleryDesktop from '../assets/case-studies/suits-gallery-desktop.webp'
+import dreamsHeroDarkDesktop from '../assets/case-studies/dreams-hero-dark-desktop.webp'
+import dreamsHeroLightDesktop from '../assets/case-studies/dreams-hero-light-desktop.webp'
 
 export const projects = [
   {
@@ -46,7 +49,7 @@ export const projects = [
         'Builds trust before customers even make contact',
         'Reflects the quality of the business',
       ],
-      showcaseImage: crownbisiSite,
+      showcaseImages: [crownbisiHeroDesktop, crownbisiProductsDesktop],
       showcaseLabel: 'The Homepage',
       applications: ['Website Header', 'WhatsApp Ordering Flow', 'Product Catalogue', 'Business Card', 'Store Signage', 'Social Media Profile'],
       before: [
@@ -80,7 +83,48 @@ export const projects = [
     development: 'React-based order flow that outputs a formatted order directly, replacing manual note-taking.',
     outcome:
       'The client\'s reaction to seeing the first completed order come through: "Mad. This is fire." A suit business now runs its intake process instead of improvising it.',
-    mockupImage: suitsHero,
+    mockupImage: suitsHeroDesktop,
+    caseStudy: {
+      category: 'Website Experience + Order System',
+      tagline: 'From voice notes to a real order flow',
+      name: 'Everything Suits',
+      timeline: ['Discovery', 'Order Flow Design', 'UI Design', 'Development', 'Launch'],
+      heroImage: suitsHeroDesktop,
+      heroImageBg: 'var(--card)',
+      challenge:
+        "Everything Suits builds made-to-measure suits, but every order started as a WhatsApp voice note — measurements described out loud, photos sent separately, details that got buried the moment the next message came in.",
+      thinking: [
+        "A tailoring business runs on precision. The intake process should match that, not fight it.",
+        "Instead of asking customers to describe measurements in a voice note, we built a structured flow: choose a package, choose how you want to submit measurements, fill in a real form. What comes out the other end is a clean, formatted order — not a scroll-back search.",
+        "The design leans into the craft itself — warm, confident, tailored — rather than borrowing a generic fashion template.",
+      ],
+      checklist: [
+        'Structured measurement intake, not voice notes',
+        'Package tiers customers can compare at a glance',
+        'Orders arrive as a clean, formatted summary',
+        'Past work shown as real finished pieces, not stock photography',
+        'Feels as considered as the suits themselves',
+        'Built to scale as the client list grows',
+      ],
+      showcaseImages: [suitsHeroDesktop, suitsGalleryDesktop],
+      showcaseLabel: 'The Order Experience',
+      mobileImage: suitsHeroMobile,
+      applications: ['Order Flow', 'Package Selection', 'Measurement Intake', 'Past Work Gallery', 'WhatsApp Handoff'],
+      before: [
+        'Orders lived entirely in WhatsApp voice notes.',
+        'Measurements were easy to lose in scroll-back.',
+        'No structured way to compare packages.',
+        'No visual home for past work.',
+      ],
+      after: [
+        'A real order flow with package tiers.',
+        'Structured measurement intake.',
+        'Orders arrive as a clean summary, ready to act on.',
+        'A gallery that shows the craft, not just the pitch.',
+      ],
+      takeaway:
+        "A tailoring business sells precision. The intake process customers go through should feel like proof of that, not the one part of the experience still held together with voice notes.",
+    },
   },
   {
     id: 'ejimaco',
@@ -116,7 +160,7 @@ export const projects = [
         'It gives the business a stronger and more trustworthy identity.',
         "It's designed to grow with the business.",
       ],
-      showcaseImages: [ejimacoHero, ejimacoShop],
+      showcaseImages: [ejimacoHeroDesktop, ejimacoCategoryDesktop],
       showcaseLabel: 'The Identity, Live',
       applications: ['Business Card', 'Letterhead', 'Website Header', 'Social Profile', 'Packaging', 'Store Signage'],
       before: [
@@ -144,8 +188,8 @@ export const portfolioExample = {
   url: 'debomiportfolio.netlify.app',
   description:
     'A multi-page personal portfolio with its own light/dark system and five distinct service pages — proof the same design system scales from product storefronts to personal brands.',
-  heroImageDark: dreamsHeroDark,
-  heroImageLight: dreamsHeroLight,
+  heroImageDark: dreamsHeroDarkDesktop,
+  heroImageLight: dreamsHeroLightDesktop,
 }
 
 export const upcomingProjects = [

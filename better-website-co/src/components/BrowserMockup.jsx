@@ -71,11 +71,11 @@ export default function BrowserMockup() {
           <span style={{ color: 'var(--accent)' }}>●</span>
           <AnimatePresence mode="wait">
             <motion.span
-              key={current.url}
+              key={current.id}
               initial={{ opacity: 0, y: 4 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -4 }}
-              transition={{ duration: 0.25 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
             >
               {current.url}
             </motion.span>
@@ -91,7 +91,7 @@ export default function BrowserMockup() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.4, ease: 'easeOut' }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
             className="absolute inset-0 p-6 flex flex-col"
           >
             {current.placeholder ? (
