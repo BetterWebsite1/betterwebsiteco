@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { projects } from '../data/projects'
+import { projects, portfolioExample } from '../data/projects'
 
 const tabs = [
-  ...projects.map((p) => ({ ...p, showcase: p.caseStudy?.showcaseImage })),
+  ...projects.map((p) => ({
+    ...p,
+    showcase: p.mockupImage || p.caseStudy?.showcaseImage || p.caseStudy?.showcaseImages?.[0],
+  })),
+  { id: portfolioExample.id, name: portfolioExample.name, url: portfolioExample.url, showcase: portfolioExample.heroImageDark },
   { id: 'future', name: 'Future Project', url: 'yourbrand.com', placeholder: true },
 ]
 

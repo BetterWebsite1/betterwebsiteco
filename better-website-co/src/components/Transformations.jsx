@@ -72,7 +72,7 @@ export default function Transformations() {
     <section id="transformations" className="py-24 border-t" style={{ borderColor: 'var(--border)' }}>
       <div className="container-bw">
         <div className="max-w-xl mb-14 flex items-start gap-5">
-          <Bee pose="point" size="sm" className="rotate-90 shrink-0 mt-1 hidden sm:block" />
+          <Bee size="sm" className="rotate-90 shrink-0 mt-1 hidden sm:block" />
           <div>
             <p className="eyebrow mb-4">Not portfolio. Transformations.</p>
             <h2 className="font-display text-3xl md:text-4xl" style={{ color: 'var(--text-primary)' }}>
@@ -99,17 +99,25 @@ export default function Transformations() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.4 }}
-          className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 rounded-2xl border p-8"
+          className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 rounded-2xl border p-8"
           style={{ borderColor: 'var(--border)', background: 'transparent' }}
         >
-          <div>
-            <p className="eyebrow mb-2">Also built — a personal brand example</p>
-            <p className="font-display text-xl mb-1" style={{ color: 'var(--text-primary)' }}>
-              {portfolioExample.name}
-            </p>
-            <p className="text-sm max-w-lg" style={{ color: 'var(--text-secondary)' }}>
-              {portfolioExample.description}
-            </p>
+          <div className="flex items-center gap-6">
+            <img
+              src={portfolioExample.heroImageDark}
+              alt={`${portfolioExample.name} live site`}
+              className="hidden sm:block h-24 w-16 object-cover object-top rounded-lg border shrink-0"
+              style={{ borderColor: 'var(--border)' }}
+            />
+            <div>
+              <p className="eyebrow mb-2">Also built — a personal brand example</p>
+              <p className="font-display text-xl mb-1" style={{ color: 'var(--text-primary)' }}>
+                {portfolioExample.name}
+              </p>
+              <p className="text-sm max-w-lg" style={{ color: 'var(--text-secondary)' }}>
+                {portfolioExample.description}
+              </p>
+            </div>
           </div>
           <span
             className="shrink-0 text-sm font-medium underline underline-offset-4"

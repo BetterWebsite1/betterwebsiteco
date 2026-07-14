@@ -33,7 +33,7 @@ function FaqItem({ item, isOpen, onToggle }) {
             className="overflow-hidden"
           >
             <div className="pb-6 flex items-start gap-4 max-w-2xl">
-              <Bee pose="idea" size="sm" className="shrink-0 hidden sm:block" animateIn={false} />
+              <Bee size="sm" className="shrink-0 hidden sm:block" animateIn={false} />
               <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
                 {item.a}
               </p>

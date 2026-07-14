@@ -36,7 +36,6 @@ export default function Hero() {
             </Button>
             {/* Bee points toward the primary CTA once, on load, then stays still. */}
             <Bee
-              pose="point"
               size="sm"
               delay={0.9}
               className="absolute -top-11 left-1 -scale-x-100 hidden sm:block"

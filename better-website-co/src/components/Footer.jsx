@@ -88,7 +88,7 @@ export default function Footer() {
               +{WHATSAPP_NUMBER.replace(/(\d{3})(\d{3})(\d{3})(\d+)/, '$1 $2 $3 $4')}
             </p>
             <Link to="/meet-bee" aria-label="A little secret" className="opacity-60 hover:opacity-100 transition-opacity">
-              <Bee pose="wave" size="sm" className="!h-6" animateIn={false} />
+              <Bee size="sm" className="!h-6" animateIn={false} />
             </Link>
           </div>
         </div>

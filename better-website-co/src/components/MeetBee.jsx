@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import Bee, { BEE_POSES } from './Bee/Bee'
+import Bee, { BEE_MASCOT } from './Bee/Bee'
 import Button from './Button'
 import Logo from './Logo'
-import turntable from '../assets/bee/bee-turntable.mp4'
 
 const CHECKLIST = [
   'Build trust quickly.',
@@ -25,8 +24,6 @@ const IN_ACTION = [
 ]
 
 const FUTURE = ['Social Media', 'Website Reviews', 'Case Studies', 'YouTube', 'Email Newsletters', 'Presentations', 'Merchandise', 'Client Welcome Kits']
-
-const GALLERY = ['wave', 'point', 'idle', 'look-around', 'idea', 'hop', 'bow', 'exit']
 
 export default function MeetBee() {
   return (
@@ -50,10 +47,9 @@ export default function MeetBee() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="mx-auto mb-8 rounded-2xl overflow-hidden border max-w-[280px]"
-            style={{ borderColor: 'var(--border)' }}
+            className="mx-auto mb-8 flex items-center justify-center max-w-[280px]"
           >
-            <video src={turntable} autoPlay loop muted playsInline className="w-full h-full object-cover" />
+            <Bee size="xl" animateIn={false} className="!h-64" />
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 16 }}
@@ -99,7 +95,7 @@ export default function MeetBee() {
                 <p className="text-xs" style={{ color: 'var(--text-muted)' }}>Name</p>
                 <p className="font-display text-xl" style={{ color: 'var(--text-primary)' }}>Bee</p>
               </div>
-              <Bee pose="idea" size="sm" animateIn={false} />
+              <Bee size="sm" animateIn={false} />
             </div>
             <div className="grid sm:grid-cols-2 gap-6 mb-8">
               <div>
@@ -143,22 +139,6 @@ export default function MeetBee() {
         </div>
       </section>
 
-      {/* Animation gallery */}
-      <section className="py-20 border-t" style={{ borderColor: 'var(--border)' }}>
-        <div className="container-bw">
-          <p className="eyebrow mb-10">Animation Gallery</p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {GALLERY.map((pose) => (
-              <div key={pose} className="rounded-2xl border p-6 flex flex-col items-center gap-4" style={{ borderColor: 'var(--border)', background: 'var(--card)' }}>
-                <Bee pose={pose} size="md" />
-                <p className="text-xs capitalize" style={{ color: 'var(--text-muted)' }}>{pose.replace('-', ' ')}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-xs mt-8" style={{ color: 'var(--text-muted)' }}>8 moods, more if the mood strikes.</p>
-        </div>
-      </section>
-
       {/* Bee in action */}
       <section className="py-20 border-t" style={{ borderColor: 'var(--border)' }}>
         <div className="container-bw max-w-xl">
@@ -190,14 +170,14 @@ export default function MeetBee() {
       {/* Secret reward */}
       <section className="py-24 border-t" style={{ borderColor: 'var(--border)' }}>
         <div className="container-bw max-w-md text-center">
-          <Bee pose="bow" size="lg" className="mx-auto mb-6" />
+          <Bee size="lg" className="mx-auto mb-6" />
           <p className="font-display text-2xl mb-3" style={{ color: 'var(--text-primary)' }}>
             You found Bee's hideout.
           </p>
           <p className="text-sm mb-8" style={{ color: 'var(--text-secondary)' }}>
             Thanks for being curious. Here's a wallpaper, just for you.
           </p>
-          <a href={BEE_POSES.wave.src} download="bee-wallpaper.webp">
+          <a href={BEE_MASCOT.src} download="bee-mascot.webp">
             <Button variant="secondary">Download Bee wallpaper</Button>
           </a>
         </div>

@@ -7,11 +7,6 @@ function scrollToInquiry() {
   document.getElementById('inquiry')?.scrollIntoView({ behavior: 'smooth' })
 }
 
-// Launch = a friendly wave hello. Growth = confident point forward.
-// Scale = a bow — the closest honest stand-in we have for "custom, considered work"
-// until a dedicated blueprint pose exists.
-const TIER_POSE = { launch: 'wave', growth: 'point', scale: 'bow' }
-
 export default function Pricing({ onSelect }) {
   return (
     <section id="pricing" className="py-24 border-t" style={{ borderColor: 'var(--border)' }}>
@@ -55,7 +50,7 @@ export default function Pricing({ onSelect }) {
                 </span>
               )}
 
-              <Bee pose={TIER_POSE[tier.id]} size="sm" className="mb-4" delay={i * 0.08} />
+              <Bee size="sm" className="mb-4" delay={i * 0.08} />
 
               <h3 className="font-display text-2xl mb-2" style={{ color: 'var(--text-primary)' }}>
                 {tier.name}

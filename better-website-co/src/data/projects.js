@@ -1,8 +1,12 @@
 import ejimacoWordmark from '../assets/case-studies/ejimaco-wordmark.webp'
 import ejimacoEvolution from '../assets/case-studies/ejimaco-before-after.webp'
-import ejimacoSite from '../assets/case-studies/ejimaco-site.webp'
+import ejimacoHero from '../assets/case-studies/ejimaco-hero.webp'
+import ejimacoShop from '../assets/case-studies/ejimaco-shop.webp'
 import crownbisiLogo from '../assets/case-studies/crownbisi-logo.webp'
 import crownbisiSite from '../assets/case-studies/crownbisi-site.webp'
+import suitsHero from '../assets/case-studies/suits-hero.webp'
+import dreamsHeroDark from '../assets/case-studies/dreams-hero-dark.webp'
+import dreamsHeroLight from '../assets/case-studies/dreams-hero-light.webp'
 
 export const projects = [
   {
@@ -76,6 +80,7 @@ export const projects = [
     development: 'React-based order flow that outputs a formatted order directly, replacing manual note-taking.',
     outcome:
       'The client\'s reaction to seeing the first completed order come through: "Mad. This is fire." A suit business now runs its intake process instead of improvising it.',
+    mockupImage: suitsHero,
   },
   {
     id: 'ejimaco',
@@ -111,7 +116,7 @@ export const projects = [
         'It gives the business a stronger and more trustworthy identity.',
         "It's designed to grow with the business.",
       ],
-      showcaseImage: ejimacoSite,
+      showcaseImages: [ejimacoHero, ejimacoShop],
       showcaseLabel: 'The Identity, Live',
       applications: ['Business Card', 'Letterhead', 'Website Header', 'Social Profile', 'Packaging', 'Store Signage'],
       before: [
@@ -139,6 +144,8 @@ export const portfolioExample = {
   url: 'debomiportfolio.netlify.app',
   description:
     'A multi-page personal portfolio with its own light/dark system and five distinct service pages — proof the same design system scales from product storefronts to personal brands.',
+  heroImageDark: dreamsHeroDark,
+  heroImageLight: dreamsHeroLight,
 }
 
 export const upcomingProjects = [

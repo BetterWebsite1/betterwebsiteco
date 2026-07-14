@@ -168,15 +168,20 @@ export default function CaseStudy({ study, onClose }) {
               </div>
             </section>
 
-            {/* Site screenshot / applications */}
-            {study.showcaseImage && (
+            {/* Site screenshots / applications */}
+            {(study.showcaseImages || study.showcaseImage) && (
               <section className="container-bw py-16 border-t" style={{ borderColor: 'var(--border)' }}>
                 <Eyebrow>{study.showcaseLabel || 'In Practice'}</Eyebrow>
-                <div
-                  className="mt-8 rounded-2xl border overflow-hidden"
-                  style={{ borderColor: 'var(--border)' }}
-                >
-                  <img src={study.showcaseImage} alt={`${study.name} live site`} className="w-full h-auto" />
+                <div className={study.showcaseImages ? 'mt-8 grid sm:grid-cols-2 gap-6' : 'mt-8'}>
+                  {(study.showcaseImages || [study.showcaseImage]).map((src, i) => (
+                    <div
+                      key={i}
+                      className="rounded-2xl border overflow-hidden"
+                      style={{ borderColor: 'var(--border)' }}
+                    >
+                      <img src={src} alt={`${study.name} live site`} className="w-full h-auto" />
+                    </div>
+                  ))}
                 </div>
               </section>
             )}

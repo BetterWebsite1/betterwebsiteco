@@ -93,7 +93,7 @@ export default function InquiryForm({ selectedTier, onSelectTier }) {
               className="rounded-2xl border p-10 text-center"
               style={{ borderColor: 'var(--border)', background: 'var(--card)' }}
             >
-              <Bee pose="hop" size="md" className="mx-auto mb-4" animateIn={false} />
+              <Bee size="md" className="mx-auto mb-4" animateIn={false} />
               <p className="font-display text-2xl mb-2" style={{ color: 'var(--text-primary)' }}>
                 Message received.
               </p>
